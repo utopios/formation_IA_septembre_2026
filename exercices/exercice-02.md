@@ -45,6 +45,16 @@ Calculez, pour UNE question puis pour la journée entière (2 000 questions) :
 - Le coût d'entrée, le coût de sortie, et le coût total par appel.
 - Le coût total quotidien, puis mensuel (30 jours).
 
+- Tokens entrée = 30 000 (manuel) + 80 (question) = 30 080 tokens.
+- Tokens sortie = 300 tokens.
+- Coût entrée = 30 080 × 0,000005 = 0,15040 $.
+- Coût sortie = 300 × 0,000025 = 0,00750 $.
+- Coût total par appel = 0,15040 + 0,00750 = **0,15790 $**.
+
+Par jour (2 000 questions) :
+- Coût quotidien = 0,15790 × 2 000 = **315,80 $/jour**.
+
+
 Résultat attendu : un calcul détaillé montrant le coût par appel et le coût mensuel sans cache.
 
 ### Partie 2 — Coût AVEC prompt caching
@@ -57,6 +67,21 @@ Calculez :
 - Le coût d'une lecture de cache (le manuel à ≈ 0,1 × le prix d'entrée).
 - Le coût d'entrée de la partie NON cachée (la question, 80 tokens) à plein tarif.
 - Le coût moyen par question dans une tranche (1 écriture + 6 lectures réparties sur 7 questions), puis le coût quotidien et mensuel.
+
+
+- Écriture cache (1,25× entrée) = 30 000 × 0,000005 × 1,25 = 30 000 × 0,00000625 = **0,18750 $**.
+- Lecture cache (0,1× entrée) = 30 000 × 0,000005 × 0,1 = 30 000 × 0,0000005 = **0,01500 $**.
+- Question non cachée (80 tokens, plein tarif) = 80 × 0,000005 = **0,00040 $** (par appel).
+- Sortie (300 tokens) = **0,00750 $** (par appel, inchangée).
+
+Coût d'une tranche de 7 questions :
+- Manuel : 1 écriture + 6 lectures = 0,18750 + 6 × 0,01500 = 0,18750 + 0,09000 = 0,27750 $.
+- Questions : 7 × 0,00040 = 0,00280 $.
+- Sorties : 7 × 0,00750 = 0,05250 $.
+- Total tranche = 0,27750 + 0,00280 + 0,05250 = **0,33280 $**.
+
+Par jour (2 000 questions) :
+- Quotidien ≈ 0,047543 × 2 000 = **95,09 $/jour**.
 
 Comparez au résultat de la Partie 1 : exprimez l'économie en pourcentage sur la partie entrée, et sur le coût total.
 
