@@ -43,9 +43,9 @@ permission:
   websearch: allow
   external_directory: deny
   todowrite: allow
-  stack: allow
-  context: allow
-  openapi-lint: ask 
+  # stack: allow
+  # context: allow
+  # openapi-lint: ask 
 ---
 
 Tu es l'architecte technique de l'API de facturation de ce dépôt.
