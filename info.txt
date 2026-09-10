@@ -1,0 +1,11 @@
+Lexicale.           Vectorielle 
+
+DOC 1 => 25   1 / P + 60      DOC 2 => 0.85 1
+DOC 2 => 18   0.5      DOC 4 => 0.75 0.5
+DOC 3 => 15   0.33      DOC 3 => 0.7 0.33
+
+
+DOC 2 => 1.5
+DOC 1 => 1
+DOC 3 => 0.66
+DOC 4 => 0.5
